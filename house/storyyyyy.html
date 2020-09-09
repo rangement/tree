@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>story</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="icon" href="data/yellowneon.ico" type="image/x-icon">
+
+<style type="text/css">
+
+html{
+background: darkgrey;
+overflow: hidden;
+}
+
+@font-face {
+  font-family: 'TimesTenLTStd-Roman';
+  src: url('data/TimesTen-Roman.otf'); /* IE9 Compat Modes */
+}
+
+.random{
+height: 50vh;
+width: 90vw;
+top:0;
+position: absolute; /* Stay in place */
+z-index: -1; /* Sit on top */
+
+}
+
+#clicker p{
+  cursor: pointer;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: absolute; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left:0;
+  top:0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin:0.5em;
+  position: absolute;
+  padding-left: 1em;
+  padding-right: 1em;
+  bottom: 0;
+  border: 1px solid black;
+  -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+     -khtml-user-select: none; 
+       -moz-user-select: none; 
+        -ms-user-select: none; 
+            user-select: none;
+  bottom:0;
+  width:95.5%;
+  font-size: 20px;
+  font-family: Times;
+  background-color: darkgrey;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="random">
+<svg width="100vw" height="100vh" >
+<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" vector-effect="non-scaling-stroke" viewBox="0 0 1405.43 840.38"><defs><style>.cls-1{fill:none;}.cls-2{fill:darkgrey;stroke:#000;stroke-miterlimit:10;stroke-width:0.75px;}.cls-3{font-size:31px;font-family:TimesTenLTStd-Roman, Times Ten LT Std;}.cls-4{letter-spacing:-0.04em;}.cls-5{letter-spacing:-0.01em;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><rect preserveAspectRatio="none" vector-effect="non-scaling-stroke" class="cls-1" x="0.7" y="0.37" width="1400" height="840"/><path preserveAspectRatio="none" vector-effect="non-scaling-stroke" class="cls-2" d="M443.93,16.85c11.38,2.23,23.09,5,32,11.91,6.44,5,11,11.72,17.07,17,7.1,6.19,16,10.2,24.72,14.27a832.11,832.11,0,0,1,163.1,100.4c31.26-10.84,56.08-36.38,64.41-66.29,3.82-13.72,4.6-28.72,13.31-40.37C776.33,30,814.15,33.23,845.18,29.87c23.7-2.57,46.3-10.41,69.37-16.07C985.9-3.72,1061-.31,1134.76,3.23c18.89.9,38.26,1.91,55.58,8.94,54.52,22.16,63.32,88.52,91.37,137.12,9.71,16.83,22.86,33.79,21.22,52.81-2.35,27.07-32.49,43.45-59,55.16L1107.28,317.7c29.47-.16,58.74-10.63,80.65-28.86l109.82,55.45c17.69,8.94,35.57,18,50.53,30.49,31.48,26.31,47.12,65.79,51.12,104.85s-2.47,78.33-8.92,117.11c-41.48,18.27-89,27.57-133.81,18.25-19.34-4-37.65-11.35-56.52-17-74.58-22.14-155-16.57-233.1-10.77,13.6.75,19.53,16,22.15,28.34l26.29,123.91c-35.86,43.53-100.17,58.7-159.29,56.83s-116.68-17.69-175.5-23.51c-20.14-2-43.65-4.55-54-20.68-4.52-7.07-5.49-15.54-6.21-23.73a672.18,672.18,0,0,1,8-177.82C545,590,475,653.59,431,730.16c-11.69,20.31-22.92,42.83-44.68,54-18.93,9.71-41.9,8.68-63.5,7.38l-128.47-7.72C185.74,674.42,252.58,563.07,357.48,512c-72.4,28-146.69,56.34-225.08,59.51-13.84.55-28.68,0-40-7.33C82.67,557.83,77.14,547.49,72,537.6L26.3,449.68c-8.8-16.94-17.82-34.93-16-53.65C12,378.12,23.4,362.45,30.43,345.69s8.57-38.36-6-50.3c-4.95-4.07-11.51-6.75-14.85-12.05C6.37,278.19,7,271.71,8.55,265.93,20.21,223.54,73.29,205.56,119,194.19L237.3,164.73C155,177.59,58.59,181.74.64,126.13A1292.31,1292.31,0,0,1,280.07,20.21C322.13,9.6,357.52,2.46,400.92,2.46"/><text class="cls-3" transform="translate(1274.7 304.37)"><a href="http://theiaflynn.github.io/treehouse/storyyyyyy.html">There</a></text><text class="cls-3" transform="translate(78.46 636.23)"><a href="http://theiaflynn.github.io/treehouse/storyyyyyyyyyy.html">Here</a></text></g></g></svg>
+</svg>
+</div>
+
+<!-- Trigger/Open The Modal -->
+<div id="clicker"></div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+<div class="modal-content">
+   <p>I’m impressed, I didn’t think flowers could grow like these. Over there, there’s more. They’re all so colorful, I feel like I can taste them. Have you ever sucked on a flower? A honey suckle. Like this.</p>
+   <span class="close"></span>
+</div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var click = document.getElementById("clicker");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+var myFunc = function() {
+  modal.style.display = "block";
+}
+
+window.onload = function() {
+  setTimeout(myFunc, 200);
+}
+
+document.onclick = function() {
+  modal.style.display = "block";
+}
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+
+</script>
+
+</body>
+</html>

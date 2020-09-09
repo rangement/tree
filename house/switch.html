@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>switch</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+  <link rel="icon" href="data/yellowneon.ico" type="image/x-icon">
+
+<style type="text/css">
+
+html{
+  overflow: hidden;
+  background-color: grey;
+}
+
+.color{
+  position: absolute;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  background-color: grey;
+}
+
+body{
+	margin-left:0.25em;
+	margin-top:0.75em;
+	font-size: 2em;
+    font-family: arial;
+    left:10px;
+     -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+}
+
+text{
+padding: 1em;
+}
+
+.element, .element2, .element3, .element4 {
+    width:45vw;
+    height:45vh;
+    position: absolute;
+  	background-size: 90% 90%;
+    margin: 0 0.5em 0.5em 0.5em;
+
+/*  	outline: solid;
+  	outline-color: black;
+  	outline-width: 0.5px;*/
+}
+
+.element2, .element4 {
+    margin-left:53vw;
+}
+
+.element3, .element4 {
+    margin-top:49vh;
+
+}
+
+.option_1 {
+    background:lime;
+    background: url(data/switch/pelle.svg) no-repeat center center;
+  	background-size: 90% 90%;
+  	content:"1";
+/*  	outline: solid;
+  	outline-color: black;
+  	outline-width: 0.5px;*/
+}
+
+
+.option_2 {
+    background: linear-gradient(rgba(255,0,0), rgba(255,0,0));
+    background: url("data/switch/brique.svg") no-repeat center center;
+    background-size:90% 90%;
+  	content:"2";
+/*  	outline: solid;
+  	outline-color: black;
+  	outline-width: 0.5px;*/
+}
+
+
+.option_3 {
+    background:red;
+    background: url("data/grid.svg") no-repeat center center;
+  	background-size: 80% 80%;
+  	content:"3";
+/*  	outline: solid;
+  	outline-color: black;
+  	outline-width: 0.5px;*/
+}
+
+.option_4 {
+    background:red;
+    background: url("data/switch/brique.svg") no-repeat center center;
+  	background-size: 90% 90%;
+  	content:"4";
+/*  	outline: solid;
+  	outline-color: black;
+  	outline-width: 0.5px;*/
+}
+
+.option_5 {
+    background:red;
+    background: url("data/switch/balls.svg") no-repeat center center;
+  	background-size: 90% 90%;
+  	content:"5";
+/*  	outline: solid;
+  	outline-color: black;
+  	outline-width: 0.5px;*/
+}
+
+.option_6 {
+    background:red;
+    background: url("data/switch/boule.svg") no-repeat center center;
+  	background-size: 90% 90%;
+  	content:"6";
+/*  	outline: solid;
+  	outline-color: black;
+  	outline-width: 0.5px;*/
+}
+
+.option_7 {
+    background:red;
+    background: url("data/switch/books.svg") no-repeat center center;
+  	background-size: 90% 90%;
+  	content:"7";
+/*  	outline: solid;
+  	outline-color: black;
+  	outline-width: 0.5px;*/
+}
+
+.option_8 {
+    background:red;
+    background: url("data/switch/pot.svg") no-repeat center center;
+  	background-size: 90% 90%;
+  	content:"8";
+/*  	outline: solid;
+  	outline-color: black;
+  	outline-width: 0.5px;*/
+}
+
+.option_9 {
+    background:red;
+    background: url("data/switch/lapin.svg") no-repeat center center;
+  	background-size: 90% 90%;
+  	content:"9";
+/*  	outline: solid;
+  	outline-color: black;
+  	outline-width: 0.5px;*/
+}
+
+.option_10 {
+    background:red;
+    background: url("data/switch/misc.svg") no-repeat center center;
+  	background-size: 90% 90%;
+  	content:"10";
+/*  	outline: solid;
+  	outline-color: black;
+  	outline-width: 0.5px;*/
+}
+
+.option_11 {
+    background:red;
+    background: url("data/switch/can.svg") no-repeat center center;
+  	background-size: 90% 90%;
+  	content:"11";
+/*  	outline: solid;
+  	outline-color: black;
+  	outline-width: 0.5px;*/
+}
+
+.option_12 {
+    background:red;
+    background: url("data/switch/plante.svg") no-repeat center center;
+  	background-size: 90% 90%;
+  	content:"12";
+/*  	outline: solid;
+  	outline-color: black;
+  	outline-width: 0.5px;*/
+}
+
+.option_13 {
+    background:red;
+    background: url("data/switch/marteau.svg") no-repeat center center;
+  	background-size: 90% 90%;
+  	content:"13";
+/*  	outline: solid;
+  	outline-color: black;
+  	outline-width: 0.5px;*/
+}
+
+.option_14 {
+    background:red;
+    background: url("data/switch/pelle.svg") no-repeat center center;
+  	background-size: 90% 90%;
+  	content:"14";
+/*  	outline: solid;
+  	outline-color: black;
+  	outline-width: 0.5px;*/
+}
+
+.option_15 {
+    background:red;
+    background: url("data/switch/boule.svg") no-repeat center center;
+  	background-size: 90% 90%;
+  	content:"15";
+/*  	outline: solid;
+  	outline-color: black;
+  	outline-width: 0.5px;*/
+}
+
+.option_16 {
+    background:red;
+    background: url("data/switch/perceuse.svg") no-repeat center center;
+  	background-size: 90% 90%;
+  	content:"16";
+/*  	outline: solid;
+  	outline-color: black;
+  	outline-width: 0.5px;*/
+}
+
+@media only screen and (max-width: 500px) {
+.element2, .element4 {
+    margin-left:50.5vw;
+}
+}
+
+</style>
+</head>
+<body>
+
+<div id="title">   
+</div>
+
+<div class="element">   
+</div>
+
+<div class="element2">   
+</div>
+
+<div class="element3">   
+</div>
+
+<div class="element4">   
+</div>
+
+<div class="color">   
+</div>
+
+
+<script type="text/javascript">
+
+$(".element").click(function() {
+
+	var classes = ['option_1', 'option_2', 'option_3', 'option_4', 'option_5', 'option_6', 'option_7', 'option_8', 'option_9', 'option_10', 'option_11', 'option_12', 'option_13', 'option_14', 'option_15', 'option_16'];
+	var texts = ['I took the train this morning', 'never again', 'it really is quiet out here', 'shhh','in the grass','ah...','I never know where to look','peaceful I think','atop an ancient tree', 'looking down', 'sharp wood', 'sharp sound', 'the hammer, so heavy', 'no I took my bike'];
+	var randomnumber = Math.floor(Math.random() * classes.length); 
+	var randomnumber2 = Math.floor(Math.random() * texts.length); 
+	var selectedClass = classes[randomnumber];
+	var selectedText = texts[randomnumber2]; 
+  console.log(randomnumber);
+
+    if($(this).hasClass(selectedClass)){
+      $(".element").removeClass(classes.join(' '));
+      $(".element").addClass(classes[(randomnumber + 1) % classes.length]);
+      console.log("hi");
+    } else {
+      $(".element").removeClass(classes.join(' '));
+      $(".element").addClass(selectedClass);
+    }
+    if($(this).text() === selectedText){
+      $(this).text(texts[(randomnumber2 + 1) % texts.length]);
+    } else{
+      $(this).text(selectedText);
+    }
+});
+
+
+$(".element2").click(function() {
+
+  var classes = ['option_1', 'option_2', 'option_3', 'option_4', 'option_5', 'option_6', 'option_7', 'option_8', 'option_9', 'option_10', 'option_11', 'option_12', 'option_13', 'option_14', 'option_15', 'option_16'];
+  var texts = ['I took the train this morning', 'never again', 'it really is quiet out here', 'shhh','in the grass','ah...','I never know where to look','peaceful I think','atop an ancient tree', 'looking down', 'sharp wood', 'sharp sound', 'the hammer, so heavy', 'no I took my bike'];
+  var randomnumber = Math.floor(Math.random() * classes.length); 
+  var randomnumber2 = Math.floor(Math.random() * texts.length); 
+  var selectedClass = classes[randomnumber];
+  var selectedText = texts[randomnumber2]; 
+  console.log(randomnumber);
+
+    if($(this).hasClass(selectedClass)){
+      $(".element2").removeClass(classes.join(' '));
+      $(".element2").addClass(classes[(randomnumber + 1) % classes.length]);
+      console.log("hi");
+    } else {
+      $(".element2").removeClass(classes.join(' '));
+      $(".element2").addClass(selectedClass);
+    }
+    if($(this).text() === selectedText){
+      $(this).text(texts[(randomnumber2 + 1) % texts.length]);
+    } else{
+      $(this).text(selectedText);
+    }
+}); 
+
+
+$(".element3").click(function() {
+
+  var classes = ['option_1', 'option_2', 'option_3', 'option_4', 'option_5', 'option_6', 'option_7', 'option_8', 'option_9', 'option_10', 'option_11', 'option_12', 'option_13', 'option_14', 'option_15', 'option_16'];
+  var texts = ['I took the train this morning', 'never again', 'it really is quiet out here', 'shhh','in the grass','ah...','I never know where to look','peaceful I think','atop an ancient tree', 'looking down', 'sharp wood', 'sharp sound', 'the hammer, so heavy', 'no I took my bike'];
+  var randomnumber = Math.floor(Math.random() * classes.length); 
+  var randomnumber2 = Math.floor(Math.random() * texts.length); 
+  var selectedClass = classes[randomnumber];
+  var selectedText = texts[randomnumber2]; 
+  console.log(randomnumber);
+
+    if($(this).hasClass(selectedClass)){
+      $(".element3").removeClass(classes.join(' '));
+      $(".element3").addClass(classes[(randomnumber + 1) % classes.length]);
+      console.log("hi");
+    } else {
+      $(".element3").removeClass(classes.join(' '));
+      $(".element3").addClass(selectedClass);
+    }
+    if($(this).text() === selectedText){
+      $(this).text(texts[(randomnumber2 + 1) % texts.length]);
+    } else{
+      $(this).text(selectedText);
+    }
+});
+
+
+$(".element4").click(function() {
+
+  var classes = ['option_1', 'option_2', 'option_3', 'option_4', 'option_5', 'option_6', 'option_7', 'option_8', 'option_9', 'option_10', 'option_11', 'option_12', 'option_13', 'option_14', 'option_15', 'option_16'];
+  var texts = ['I took the train this morning', 'never again', 'it really is quiet out here', 'shhh','in the grass','ah...','I never know where to look','peaceful I think','atop an ancient tree', 'looking down', 'sharp wood', 'sharp sound', 'the hammer, so heavy', 'no I took my bike'];
+  var randomnumber = Math.floor(Math.random() * classes.length); 
+  var randomnumber2 = Math.floor(Math.random() * texts.length); 
+  var selectedClass = classes[randomnumber];
+  var selectedText = texts[randomnumber2]; 
+  console.log(randomnumber);
+
+    if($(this).hasClass(selectedClass)){
+      $(".element4").removeClass(classes.join(' '));
+      $(".element4").addClass(classes[(randomnumber + 1) % classes.length]);
+      console.log("hi");
+    } else {
+      $(".element4").removeClass(classes.join(' '));
+      $(".element4").addClass(selectedClass);
+    }
+    if($(this).text() === selectedText){
+      $(this).text(texts[(randomnumber2 + 1) % texts.length]);
+    } else{
+      $(this).text(selectedText);
+    }
+});
+
+$(document).keydown(function(e){
+    if (e.which == 37) { 
+       window.location.replace("https://theiaflynn.github.io/treehouse/paths.html");
+       return false;
+    }
+        if (e.which == 39) { 
+       window.location.replace("https://theiaflynn.github.io/treehouse/scape.html");
+       return false;
+    }
+});
+
+</script>
+</body>
+</html>

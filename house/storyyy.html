@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>story</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="icon" href="data/yellowneon.ico" type="image/x-icon">
+
+<style type="text/css">
+
+html{
+background: darkgrey;
+overflow: hidden;
+}
+
+
+@font-face {
+  font-family: 'TimesTenLTStd-Roman';
+  src: url('data/TimesTen-Roman.otf'); /* IE9 Compat Modes */
+} 
+
+
+.random{
+height: 50vh;
+width: 90vw;
+top:0;
+position: absolute; /* Stay in place */
+z-index: -1; /* Sit on top */
+
+}
+
+#clicker p{
+  cursor: pointer;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: absolute; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left:0;
+  top:0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin:0.5em;
+  position: absolute;
+  padding-left: 1em;
+  padding-right: 1em;
+  bottom: 0;
+  border: 1px solid black;
+  -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+     -khtml-user-select: none; 
+       -moz-user-select: none; 
+        -ms-user-select: none; 
+            user-select: none;
+  bottom:0;
+  width:95.5%;
+  font-size: 20px;
+  font-family: Times;
+  background-color: darkgrey;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="random">
+<svg width="100vw" height="100vh" >
+<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" vector-effect="non-scaling-stroke" viewBox="0 0 1400 840"><defs><style>.cls-1{fill:none;}.cls-2{fill:darkgrey;stroke:#000;stroke-miterlimit:10;stroke-width:0.75px;}.cls-3{font-size:31px;font-family:TimesTenLTStd-Roman, Times Ten LT Std;}.cls-4{letter-spacing:-0.01em;}.cls-5{letter-spacing:-0.04em;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><rect preserveAspectRatio="none" vector-effect="non-scaling-stroke" class="cls-1" width="1400" height="840"/><path preserveAspectRatio="none" vector-effect="non-scaling-stroke" class="cls-2" d="M239.3,197.83v120.5l4.91,21.14v22.2s-3.51,7.4-2.46,10.57,3.16-20.08,1.05,3.17-3.5,51.8-3.5,51.8l-3.5,21.14-4.2,21.14v19s-2.81-3.17,0,16.92-1.25,13.74-1.25,13.74,4.05-1.06,4.05,6.34v7.4l2.88,19-6.93,11.62-6.46-12.68-13.31-14.8L205,516l-7-15.86-11.21-12.68L167.14,449.4l-3,4.07v10.24l7.71,20.47,1.55,13L158.59,478.6,147.79,460l-9.56-13.5-7.4-16.28-9.26-27.93-5.24-17.69-8.64-17.68v13.8s-.61.63,0,4.82,7.71,38.16,7.71,38.16v25.13s.62,8.38.62,12.1,11.72,26.07,11.72,27.46,3.4,16.29,4,20.48,1.85,11.17,2.47,14.89,3.39,11.17,3.39,11.17l-18.2-45.14-10.18-7-1.81,8.37,6.44,11.17-6.44-3.72-6.82-17.22L87,448.35,74.69,430.66v15.82l6.78,14.9L88,485.58l6.17,17.69,3.39,18.15,5.86,14,19.13,32.49,4.32,9.4,4.32,15.82,3.39,3.72-.62,5.12h-6.17l-25.91-10.24-41.95-.46H50.63l-18.2,7-10.49.93V718l49-3.72,39.8,1.64,51.2,2.32,61.39-2.79,81.12,3L356,712l51.51,5.12,71,2.57L576,714.09l99.32,5.58,47.2,1.16,119.38-3.48,21.59,4.2H944l385.91-3.45,33.3-4.54V651.27l-3.4-16.76V603.8l-4-8.85L1353,594l-9.87,3.73-8.95,8.84L1316,616.83l11.72-28.39,2.47-23.74-4.93-1.86-20,15.82-17.28,18.15-21,32.58-4.32,7L1272.78,595l18.5-50.73-1.85-6.51-16.35,14.42-24.67,17.69-35.78,47L1202.45,628l-9.88,9.77L1181.16,527l.31-21.87.93-8.85,16.34-24.2-1.23-7.91-7.4-4.48L1161.73,419l-38.87-34.91-20.67-15.36-11.72,8.38-26.53-3.73L997.62,412l-40.71,10.24,4.31,68.88L964,537.71l-2.47,40-45.65-17.68-7.1,1.39-6.17-14,22.52-18.62,11.11-17.22-14.19-41.42-25.3-3.72-28.68-9.31-24.37-9.77,18.2-23.28,22.82-24.2L894,399l7.09-12.56L890,350.61l-17-80.05.93-28.39,10.49-14.43-13-16.76H845.24l-70.64,4.66-33,7.45-24.67,28.85L691,306.86l-15.43,26.06-19.74,15.83-16-31.19L636.72,278l-7.41-1.39L572.86,318.5l-19.74,23.73-57.07,44.22-2.77,21.87.31,36.3L496.36,514l-.92,25.13-7.72,5.59-29.61-9.31-32.39-2.79-18.2-15.83.62-47,6.48-81.45-5.86-53.52-4.32-160.11,18.2-24.2,9.87-25.6,27.14-43.75,15.43-14L452.25,43.43H413.08L382.23,36,377,28.08,317.45,73.69l-65.39,50.73L217.51,151,201.77,193.3Z"/><text class="cls-3" transform="translate(70.17 308.41)"><a href="http://theiaflynn.github.io/treehouse/storyyyy.html">Here</a></text><text class="cls-3" transform="translate(1046.1 599.15)"><a href="http://theiaflynn.github.io/treehouse/storyyyyy.html">There</a></text></g></g></svg>
+</svg>
+</div>
+
+<!-- Trigger/Open The Modal -->
+<div id="clicker"></div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+<div class="modal-content">
+   <p>Over there, we’ll be closer to the water. I also don’t like the wind by the sea, it makes my hair dirty. I’m perfectly happy going to rivers. I’ve wanted to take you here.</p>
+   <span class="close"></span>
+</div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var click = document.getElementById("clicker");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+var myFunc = function() {
+  modal.style.display = "block";
+}
+
+window.onload = function() {
+  setTimeout(myFunc, 200);
+}
+
+document.onclick = function() {
+  modal.style.display = "block";
+}
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+
+</script>
+
+</body>
+</html>

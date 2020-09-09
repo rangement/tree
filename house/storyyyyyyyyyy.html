@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>story</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="icon" href="data/yellowneon.ico" type="image/x-icon">
+
+<style type="text/css">
+
+html{
+background: darkgrey;
+overflow: hidden;
+}
+
+@font-face {
+  font-family: 'TimesTenLTStd-Roman';
+  src: url('data/TimesTen-Roman.otf'); /* IE9 Compat Modes */
+}
+
+.random{
+height: 50vh;
+width: 90vw;
+top:0;
+position: absolute; /* Stay in place */
+z-index: -1; /* Sit on top */
+
+}
+
+#clicker p{
+  cursor: pointer;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: absolute; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left:0;
+  top:0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin:0.5em;
+  position: absolute;
+  padding-left: 1em;
+  padding-right: 1em;
+  bottom: 0;
+  border: 1px solid black;
+  -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+     -khtml-user-select: none; 
+       -moz-user-select: none; 
+        -ms-user-select: none; 
+            user-select: none;
+  bottom:0;
+  width:95.5%;
+  font-size: 20px;
+  font-family: Times;
+  background-color: darkgrey;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="random">
+<svg width="100vw" height="100vh" >
+<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" vector-effect="non-scaling-stroke" viewBox="0 0 1400 840"><defs><style>.cls-1,.cls-2{fill:none;}.cls-2{stroke:#000;stroke-miterlimit:10;stroke-width:0.75px;}.cls-3{font-size:31px;font-family:TimesTenLTStd-Roman, Times Ten LT Std;}.cls-4{letter-spacing:-0.04em;}.cls-5{letter-spacing:-0.01em;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><rect preserveAspectRatio="none" vector-effect="non-scaling-stroke" class="cls-1" width="1400" height="840"/><path preserveAspectRatio="none" vector-effect="non-scaling-stroke" class="cls-2" d="M188.5,48.72c0,20.62-33.43,37.33-74.67,37.33S39.16,69.34,39.16,48.72"/><path preserveAspectRatio="none" vector-effect="non-scaling-stroke" class="cls-2" d="M337.85,48.72c0,20.62-33.44,37.33-74.68,37.33S188.5,69.34,188.5,48.72"/><path preserveAspectRatio="none" vector-effect="non-scaling-stroke" class="cls-2" d="M487.19,48.72c0,20.62-33.43,37.33-74.67,37.33s-74.67-16.71-74.67-37.33"/><path preserveAspectRatio="none" vector-effect="non-scaling-stroke" class="cls-2" d="M636.53,48.72c0,20.62-33.43,37.33-74.67,37.33s-74.67-16.71-74.67-37.33"/><path preserveAspectRatio="none" vector-effect="non-scaling-stroke" class="cls-2" d="M785.87,48.72c0,20.62-33.43,37.33-74.67,37.33s-74.67-16.71-74.67-37.33"/><path preserveAspectRatio="none" vector-effect="non-scaling-stroke" class="cls-2" d="M935.22,48.72c0,20.62-33.44,37.33-74.68,37.33s-74.67-16.71-74.67-37.33"/><path preserveAspectRatio="none" vector-effect="non-scaling-stroke" class="cls-2" d="M188.5,132.06c0,20.62-33.43,37.34-74.67,37.34s-74.67-16.72-74.67-37.34"/><path preserveAspectRatio="none" vector-effect="non-scaling-stroke" class="cls-2" d="M337.85,132.06c0,20.62-33.44,37.34-74.68,37.34s-74.67-16.72-74.67-37.34"/><path preserveAspectRatio="none" vector-effect="non-scaling-stroke" class="cls-2" d="M487.19,132.06c0,20.62-33.43,37.34-74.67,37.34s-74.67-16.72-74.67-37.34"/><path preserveAspectRatio="none" vector-effect="non-scaling-stroke" class="cls-2" d="M636.53,132.06c0,20.62-33.43,37.34-74.67,37.34s-74.67-16.72-74.67-37.34"/><path preserveAspectRatio="none" vector-effect="non-scaling-stroke" class="cls-2" d="M785.87,132.06c0,20.62-33.43,37.34-74.67,37.34s-74.67-16.72-74.67-37.34"/><path preserveAspectRatio="none" vector-effect="non-scaling-stroke" class="cls-2" d="M935.22,132.06c0,20.62-33.44,37.34-74.68,37.34s-74.67-16.72-74.67-37.34"/><path preserveAspectRatio="none" vector-effect="non-scaling-stroke" class="cls-2" d="M188.5,221.61c0,20.62-33.43,37.33-74.67,37.33s-74.67-16.71-74.67-37.33"/><path preserveAspectRatio="none" vector-effect="non-scaling-stroke" class="cls-2" d="M337.85,221.61c0,20.62-33.44,37.33-74.68,37.33s-74.67-16.71-74.67-37.33"/><path preserveAspectRatio="none" vector-effect="non-scaling-stroke" class="cls-2" d="M487.19,221.61c0,20.62-33.43,37.33-74.67,37.33s-74.67-16.71-74.67-37.33"/><path preserveAspectRatio="none" vector-effect="non-scaling-stroke" class="cls-2" d="M636.53,221.61c0,20.62-33.43,37.33-74.67,37.33s-74.67-16.71-74.67-37.33"/><path preserveAspectRatio="none" vector-effect="non-scaling-stroke" class="cls-2" d="M785.87,221.61c0,20.62-33.43,37.33-74.67,37.33s-74.67-16.71-74.67-37.33"/><path preserveAspectRatio="none" vector-effect="non-scaling-stroke" class="cls-2" d="M935.22,221.61c0,20.62-33.44,37.33-74.68,37.33s-74.67-16.71-74.67-37.33"/><path preserveAspectRatio="none" vector-effect="non-scaling-stroke" class="cls-2" d="M188.5,311.16c0,20.62-33.43,37.33-74.67,37.33s-74.67-16.71-74.67-37.33"/><path preserveAspectRatio="none" vector-effect="non-scaling-stroke" class="cls-2" d="M337.85,311.16c0,20.62-33.44,37.33-74.68,37.33s-74.67-16.71-74.67-37.33"/><path preserveAspectRatio="none" vector-effect="non-scaling-stroke" class="cls-2" d="M487.19,311.16c0,20.62-33.43,37.33-74.67,37.33s-74.67-16.71-74.67-37.33"/><path preserveAspectRatio="none" vector-effect="non-scaling-stroke" class="cls-2" d="M636.53,311.16c0,20.62-33.43,37.33-74.67,37.33s-74.67-16.71-74.67-37.33"/><path preserveAspectRatio="none" vector-effect="non-scaling-stroke" class="cls-2" d="M785.87,311.16c0,20.62-33.43,37.33-74.67,37.33s-74.67-16.71-74.67-37.33"/><path preserveAspectRatio="none" vector-effect="non-scaling-stroke" class="cls-2" d="M935.22,311.16c0,20.62-33.44,37.33-74.68,37.33s-74.67-16.71-74.67-37.33"/><path preserveAspectRatio="none" vector-effect="non-scaling-stroke" class="cls-2" d="M188.5,401.33c0,20.62-33.43,37.34-74.67,37.34S39.16,422,39.16,401.33"/><path preserveAspectRatio="none" vector-effect="non-scaling-stroke" class="cls-2" d="M337.85,401.33c0,20.62-33.44,37.34-74.68,37.34S188.5,422,188.5,401.33"/><path preserveAspectRatio="none" vector-effect="non-scaling-stroke" class="cls-2" d="M487.19,401.33c0,20.62-33.43,37.34-74.67,37.34S337.85,422,337.85,401.33"/><path preserveAspectRatio="none" vector-effect="non-scaling-stroke" class="cls-2" d="M636.53,401.33c0,20.62-33.43,37.34-74.67,37.34S487.19,422,487.19,401.33"/><path preserveAspectRatio="none" vector-effect="non-scaling-stroke" class="cls-2" d="M785.87,401.33c0,20.62-33.43,37.34-74.67,37.34S636.53,422,636.53,401.33"/><path preserveAspectRatio="none" vector-effect="non-scaling-stroke" class="cls-2" d="M935.22,401.33c0,20.62-33.44,37.34-74.68,37.34S785.87,422,785.87,401.33"/><path preserveAspectRatio="none" vector-effect="non-scaling-stroke" class="cls-2" d="M188.5,491.51c0,20.62-33.43,37.33-74.67,37.33s-74.67-16.71-74.67-37.33"/><path preserveAspectRatio="none" vector-effect="non-scaling-stroke" class="cls-2" d="M337.85,491.51c0,20.62-33.44,37.33-74.68,37.33s-74.67-16.71-74.67-37.33"/><path preserveAspectRatio="none" vector-effect="non-scaling-stroke" class="cls-2" d="M487.19,491.51c0,20.62-33.43,37.33-74.67,37.33s-74.67-16.71-74.67-37.33"/><path preserveAspectRatio="none" vector-effect="non-scaling-stroke" class="cls-2" d="M636.53,491.51c0,20.62-33.43,37.33-74.67,37.33s-74.67-16.71-74.67-37.33"/><path preserveAspectRatio="none" vector-effect="non-scaling-stroke" class="cls-2" d="M785.87,491.51c0,20.62-33.43,37.33-74.67,37.33s-74.67-16.71-74.67-37.33"/><path preserveAspectRatio="none" vector-effect="non-scaling-stroke" class="cls-2" d="M935.22,491.51c0,20.62-33.44,37.33-74.68,37.33s-74.67-16.71-74.67-37.33"/><text class="cls-3" transform="translate(1223.47 656.61)"><a href="http://theiaflynn.github.io/treehouse/storyyyyyyyyyyy.html">There</a></text><text class="cls-3" transform="translate(230.66 225.23)"><a href="http://theiaflynn.github.io/treehouse/storyyyyyy.html">Here</a></text></g></g></svg>
+</svg>
+</div>
+
+<!-- Trigger/Open The Modal -->
+<div id="clicker"></div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+<div class="modal-content">
+   <p>If only the water weren’t so cold... You think we could dip our feet in?</p>
+   <span class="close"></span>
+</div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var click = document.getElementById("clicker");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+var myFunc = function() {
+  modal.style.display = "block";
+}
+
+window.onload = function() {
+  setTimeout(myFunc, 200);
+}
+
+document.onclick = function() {
+  modal.style.display = "block";
+}
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+
+</script>
+
+</body>
+</html>

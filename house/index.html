@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>treehouse</title>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="http://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+  	<link rel="icon" href="data/yellowneon.ico" type="image/x-icon">
+
+<style type="text/css">
+
+html{
+overflow:hidden;
+background-color: #fffcfd;
+}
+
+a{
+	font-size: 1.5em;
+	font-family: Times New Roman;
+	text-decoration: none;
+	color:black;
+}
+
+#content a{
+	font-size: 1.5em;
+	font-family: Times New Roman;
+	text-decoration: none;
+	color:black;
+}
+
+
+.intro{	
+	column-count: 3;
+	column-gap: 1em;
+	column-width: 33%;
+	height: 2em;
+	padding-top: 0.25em;
+	padding-left: 0.25em;
+	outline-style: solid;
+	outline-width: 0.5px;
+	column-rule-style: solid;
+	column-rule-width: 1.5px;
+	background-color: #fffcfd;
+/*	text-align: center;*/
+}
+
+.intro2{	
+	column-count: 3;
+	column-gap: 1em;
+	column-width: 33%;
+	height: 2em;
+	padding-top: 0.25em;
+	padding-left: 0.25em;
+	outline-style: solid;
+	outline-width: 0.5px;
+	background-color: #fffcfd;
+/*	text-align: center;*/
+}
+
+#para1{
+	float: right;
+	padding-right: 0.25em;
+}
+
+body{
+	margin: 0;
+}
+
+.block{
+	height: 100%;
+	width: 100%;
+    column-count: 2;
+	column-gap: 1em;
+	column-width: 33%;
+	padding: 0.2em;
+}
+
+
+#main{
+	position: fixed;
+	bottom: 0;
+}
+
+#wrapper{
+	height: 100%;
+	width: 100vw;
+    column-count: 3;
+	column-gap: 1em;
+	column-width: 33%;
+	padding: 0.2em;
+	column-rule-style: solid;
+	column-rule-width: 1.5px;
+	bottom: 0;
+	position: relative;
+	outline-style: solid;
+	outline-width: 0.5px;
+	background-color: #fffcfd;
+}
+
+#content{
+ height: 45em;
+ overflow-y: scroll;
+ padding: 0.35em;
+}
+
+@media screen and (min-height: 1000px) {
+#content{
+ height: 52em;
+ overflow-y: scroll;
+ padding: 0.35em;
+}
+}
+
+#wrapper svg{
+animation-duration: 1s;
+animation-name: anim;
+animation-iteration-count: infinite;
+}
+
+@keyframes anim {
+
+0% {
+  opacity: 100;
+}
+50% {
+  opacity: 0;
+}
+100% {
+  opacity: 100;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="intro">
+<a>My website is a treehouse</a><br>
+<a id="para"></a><br>
+<a id="para1"></a>
+</div>
+<div class="intro">
+<a id="para1">A degree project</a><br>
+<a></a><br>
+<a id="para">⌛</a><br>
+</div>
+<div class="intro">
+<a></a><br>
+<a id="para">Theia Flynn</a><br>
+<a id="para"></a><br>
+</div>
+<div class="intro">
+<a>DC 404</a><br>
+<a></a><br>
+<a id="para">Advised by Paul Soulellis</a><br>
+</div>
+
+<div id="content">
+<div id="scroll">
+<a>
+
+My website is a treehouse /&nbsp ; &nbsp/ is a way to present a space on the web that is part of an installation /&nbsp ; &nbsp/ 
+<br> 
+My website is a treehouse /&nbsp ; &nbsp/ is a way to present a space on the web with different interactions /&nbsp ; &nbsp/
+<br> 
+My website is a treehouse /&nbsp ; &nbsp/ is a way to present a space on the web that embraces jank /&nbsp ; &nbsp/ 
+<br> 
+My website is a treehouse /&nbsp ; &nbsp/ is a way to present a space on the web that is handmade for JR /&nbsp ; &nbsp/ 
+<br> 
+My website is a treehouse /&nbsp ; &nbsp/ is a way to present a space on the web that is not so efficient /&nbsp ; &nbsp/ 
+<br> 
+My website is a treehouse /&nbsp ; &nbsp/ is a way to present a space on the web that is harcoded /&nbsp ; &nbsp/ 
+<br> 
+My website is a treehouse /&nbsp ; &nbsp/ is a way to present a space on the web that would like to be playful /&nbsp ; &nbsp/ 
+<br> 
+My website is a treehouse /&nbsp ; &nbsp/ is a way to present a space on the web that ends up being quite calm /&nbsp ; &nbsp/ 
+<br> 
+My website is a treehouse /&nbsp ; &nbsp/ is a way to present a space on the web that anyone can make /&nbsp ; &nbsp/ 
+<br> 
+My website is a treehouse /&nbsp ; &nbsp/ is a way to present a space on the web that is a work in progress /&nbsp ; &nbsp/ 
+<br> 
+My website is a treehouse /&nbsp ; &nbsp/ is a way to present a space on the web that is up simply /&nbsp ; &nbsp/ 
+<br> 
+My website is a treehouse /&nbsp ; &nbsp/ is a way to present a space on the web that is feeling sleepy /&nbsp ; &nbsp/ 
+<br> 
+My website is a treehouse /&nbsp ; &nbsp/ is a way to present a space on the web where / . / can hear birds sing /&nbsp ; &nbsp/ 
+<br> 
+My website is a treehouse /&nbsp ; &nbsp/ is a way to present a space on the web that wants a story /&nbsp ; &nbsp/ 
+<br> 
+My website is a treehouse /&nbsp ; &nbsp/ is a way to present a space on the web like a dead end /&nbsp ; &nbsp/ 
+<br> 
+My website is a treehouse /&nbsp ; &nbsp/ is a way to present a space on the web that likes hardly-poetry /&nbsp ; &nbsp/ 
+<br> 
+My website is a treehouse /&nbsp ; &nbsp/ is a way to present a space on the web that / . / might land on once /&nbsp ; &nbsp/
+<br> 
+My website is a treehouse /&nbsp ; &nbsp/ is a way to present a space on the web that / . / might stay on /&nbsp ; &nbsp/ 
+<br> 
+My website is a treehouse /&nbsp ; &nbsp/ is a way to present a space on the web that needs resolution /&nbsp ; &nbsp/ 
+<br> 
+My website is a treehouse /&nbsp ; &nbsp/ is a way to present a space on the web that doesn't need resolution /&nbsp ; &nbsp/ 
+<br>  
+My website is a treehouse /&nbsp ; &nbsp/ is a way to present a space on the web that wants different interfaces /&nbsp ; &nbsp/ 
+<br> 
+My website is a treehouse /&nbsp ; &nbsp/ is a way to present a space on the web that can be broken /&nbsp ; &nbsp/ 
+<br> 
+My website is a treehouse /&nbsp ; &nbsp/ is a way to present a space on the web that can be fixed /&nbsp ; &nbsp/ 
+<br> 
+My website is a treehouse /&nbsp ; &nbsp/ is a way to present a space on the web where / . / invited / . / /&nbsp ; &nbsp/
+<br> 
+My website is a treehouse /&nbsp ; &nbsp/ is a way to present a space on the web made up entirely of vectors /&nbsp ; &nbsp/ 
+<br> 
+My website is a treehouse /&nbsp ; &nbsp/ is a way to present a space on the web that has no inherent function /&nbsp ; &nbsp/ 
+<br> 
+My website is a treehouse /&nbsp ; &nbsp/ is a way to present a space on the web that is made up of found bits /&nbsp ; &nbsp/ 
+<br> 
+My website is a treehouse /&nbsp ; &nbsp/ is a way to present a space on the web where things are slow /&nbsp ; &nbsp/ 
+<br> 
+My website is a treehouse /&nbsp ; &nbsp/ is a way to present a space on the web try the arrows keys /&nbsp ; &nbsp/ 
+<br> 
+My website is a treehouse /&nbsp ; &nbsp/ is a way to present a space on the web that has nowhere to hide /&nbsp ; &nbsp/ 
+<br> 
+My website is a treehouse /&nbsp ; &nbsp/ is a way to present a space on the web that says hello /&nbsp ; &nbsp/ 
+<br> 
+My website is a treehouse /&nbsp ; &nbsp/ is a way to present a space on the web with suboptimal games /&nbsp ; &nbsp/ 
+<br> 
+My website is a treehouse /&nbsp ; &nbsp/ is a way to present a space on the web with an upward leanring curve /&nbsp ; &nbsp/ 
+<br> 
+My website is a treehouse /&nbsp ; &nbsp/ .............................................................................................................. /&nbsp ; &nbsp/ 
+<br> 
+My website is a treehouse /&nbsp ; &nbsp/ .............................................................................................................. /&nbsp ; &nbsp/ 
+<br> 
+My website is a treehouse /&nbsp ; &nbsp/ .............................................................................................................. /&nbsp ; &nbsp/ 
+<br> 
+My website is a treehouse /&nbsp ; &nbsp/ .............................................................................................................. /&nbsp ; &nbsp/ 
+<br> 
+My website is a treehouse /&nbsp ; &nbsp/ .............................................................................................................. /&nbsp ; &nbsp/ 
+
+</a>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<br><br> 
+<!-- <a>
+There is something nerve-wracking about publishing subpar code; code that is without a doubt not optimized, not finished, not necessarily advanced. 
+1. My website is a treehouse, is a metaphor I decided to use to talk about this type of code. Spaces that point to something larger but remain small. 2. Up, hardly connected, hardly accessible, unless invited. But here I hold a ladder out to you. 
+Waits, patiently and without a mission. There is nothing to 
+buy, to say, here. We can play, silently. Not much 
+to do. Actions, up here, limited. Maybe we 
+can listen to the leaves, 
+the birds. Entire days 
+in the trees.   
+Everything, built from pieces of wood, bricks and code I found different places, barely holding together. Hard coded. Crafty, kind 
+of, warmer this way. Do It Yourself construction.
+Else; a floating fort, with all the scraps of paper and pens to draw with. Else; a backyard shed built in the space of a few days and the indefinite tools inside. Personal, to some extent, a bit lonely, without company. 
+Most importantly, nothing required from its visitors.
+3. Once, I found a 
+site that had been built 
+a long time ago. In ruins, bits missing, but somehow still standing amongst the new 
+sites all shiny all clean, all hyperefficient, fixed and all and all. 4. Publish all the sketches even if they 
+are not finished. Ultimately, about in-efficiency, or some 
+kind of slowness I like. 
+I find it very hard to code, but I like it. 5. I wondered what craft looks like on the web. High-resolution, responsive collages? Or what these spaces actually feel like. These scalable vector graphics I stretch across the screen, like colorful rubber bands, the weight, and gravity of
+a scratch. Pointing 
+to the future. Promises. 6. Versus: the digital public infrastructures, sterile, colder. Labor, maintenance, all of it,
+invisible. Moving towards weightlessness, ease, and another kind of comfort, this one heterotopic. Domain names that were just claimed for some money. Like real land, a finite amount, belongs 
+to someone, just data space, just data space? 7. Try to humanize something free of error. 
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp -->
+<!-- 
+</a> --> 
+</div>
+</div>
+
+<div id="main">
+<div id="wrapper">
+
+
+		<div class="block">
+			<a href="https://theiaflynn.github.io/treehouse/switch.html">01</a><br><br>
+			<a href="https://theiaflynn.github.io/treehouse/switch.html" ><svg height="16.5" width="20">
+                <circle cx="10" cy="9.5" r="7" fill="#c8ff00"/>
+                </svg> Switch</a>
+		</div>
+
+		<div class="block">
+			<a href="https://theiaflynn.github.io/treehouse/scape.html">02</a>
+			<br><br>
+			<a href="https://theiaflynn.github.io/treehouse/scape.html"><svg height="16.5" width="20">
+                <circle cx="10" cy="9.5" r="7" fill="#c8ff00"/>
+                </svg> Scape</a>
+		</div>
+
+		<div class="block">
+			<a href="https://theiaflynn.github.io/treehouse/garden.html">03</a>
+			<br><br>
+			<a href="https://theiaflynn.github.io/treehouse/garden.html"><svg height="16.5" width="20">
+                <circle cx="10" cy="9.5" r="7" fill="#c8ff00"/>
+                </svg> Garden</a>
+		</div>
+
+		<div class="block">
+			<a href="https://theiaflynn.github.io/treehouse/motion.html">04</a>
+			<br>
+			<a href="https://theiaflynn.github.io/treehouse/motion.html"><svg height="16.5" width="20">
+                <circle cx="10" cy="9.5" r="7" fill="#c8ff00"/>
+                </svg> Motion</a>
+		</div>
+
+		<div class="block">
+			<a href="https://theiaflynn.github.io/treehouse/droplets.html">05</a>
+			<br><br>
+			<a href="https://theiaflynn.github.io/treehouse/droplets.html"><svg height="16.5" width="20">
+                <circle cx="10" cy="9.5" r="7" fill="#c8ff00"/>
+                </svg> Droplets</a>
+		</div>
+
+		<div class="block">
+			<a href="https://theiaflynn.github.io/treehouse/build.html">06</a>
+			<br><br>
+			<a href="https://theiaflynn.github.io/treehouse/build.html"><svg height="16.5" width="20">
+                <circle cx="10" cy="9.5" r="7" fill="#c8ff00"/>
+                </svg> Build</a>
+		</div>
+
+		<div class="block">
+			<a href="https://theiaflynn.github.io/treehouse/story.html">07</a>
+			<br><br>
+			<a href="https://theiaflynn.github.io/treehouse/story.html"><svg height="16.5" width="20">
+                <circle cx="10" cy="9.5" r="7" fill="#c8ff00"/>
+                </svg> Story</a>
+		</div>
+
+		<div class="block">
+			<a href="https://theiaflynn.github.io/treehouse/sounds.html">08</a>
+			<br>
+			<a href="https://theiaflynn.github.io/treehouse/sounds.html"><svg height="16.5" width="20">
+                <circle cx="10" cy="9.5" r="7" fill="#c8ff00"/>
+                </svg> Sounds</a>
+		</div>
+		<div class="block">
+			<a href="https://theiaflynn.github.io/treehouse/glossary/">09</a>
+			<br><br>
+			<a href="https://theiaflynn.github.io/treehouse/glossary/"><svg height="16.5" width="20">
+                <circle cx="10" cy="9.5" r="7" fill="#c8ff00"/>
+                </svg> Glossary</a>
+		</div>
+		<div class="block">
+			<a href="https://theiaflynn.github.io/treehouse/paths.html">10</a>
+			<br><br>
+			<a href="https://theiaflynn.github.io/treehouse/paths.html"><svg height="16.5" width="20">
+                <circle cx="10" cy="9.5" r="7" fill="#c8ff00"/>
+                </svg> Paths</a>
+		</div>
+
+
+</div>
+
+<div class="intro2">
+<a>Thank you for dropping by</a><br>
+<a id="para"></a><br>
+<a id="para1"></a>
+</div>
+
+</div>
+
+<script type="text/javascript">
+document.getElementById("para1").innerHTML = formatAMPM();
+
+function formatAMPM() {
+var d = new Date(),
+    minutes = d.getMinutes().toString().length == 1 ? '0'+d.getMinutes() : d.getMinutes(),
+    hours = d.getHours().toString().length == 1 ? '0'+d.getHours() : d.getHours(),
+    ampm = d.getHours() >= 12 ? 'pm' : 'am',
+    months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+    days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+return days[d.getDay()]+' '+months[d.getMonth()]+' '+d.getDate()+' '+d.getFullYear()+' '+hours+':'+minutes+ampm;
+}
+
+
+
+  $(document).keydown(function(e){
+    if (e.which == 37) { 
+       window.location.replace("https://theiaflynn.github.io/treehouse/paths.html");
+       return false;
+    }
+        if (e.which == 39) { 
+       window.location.replace("https://theiaflynn.github.io/treehouse/switch.html");
+       return false;
+    }
+});
+
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>story</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="icon" href="data/yellowneon.ico" type="image/x-icon">
+
+<style type="text/css">
+
+html{
+background: darkgrey;
+overflow: hidden;
+}
+
+@font-face {
+  font-family: 'TimesTenLTStd-Roman';
+  src: url('data/TimesTen-Roman.otf'); /* IE9 Compat Modes */
+}
+
+.random{
+height: 50vh;
+width: 90vw;
+top:0;
+position: absolute; /* Stay in place */
+z-index: -1; /* Sit on top */
+
+}
+
+#clicker p{
+  cursor: pointer;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: absolute; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left:0;
+  top:0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin:0.5em;
+  position: absolute;
+  padding-left: 1em;
+  padding-right: 1em;
+  bottom: 0;
+  border: 1px solid black;
+  -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+     -khtml-user-select: none; 
+       -moz-user-select: none; 
+        -ms-user-select: none; 
+            user-select: none;
+  bottom:0;
+  width:95.5%;
+  font-size: 20px;
+  font-family: Times;
+  background-color: darkgrey;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="random">
+<svg width="100vw" height="100vh" >
+<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" vector-effect="non-scaling-stroke" viewBox="0 0 1400 840"><defs><style>.cls-1{fill:none;}.cls-2{fill:darkgrey;stroke:#000;stroke-miterlimit:10;stroke-width:0.75px;}.cls-3{font-size:31px;font-family:TimesTenLTStd-Roman, Times Ten LT Std;}.cls-4{letter-spacing:-0.05em;}.cls-5{letter-spacing:-0.01em;}</style></defs><title>Asset 77</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><rect preserveAspectRatio="none" vector-effect="non-scaling-stroke" class="cls-1" width="1400" height="840"/><path preserveAspectRatio="none" vector-effect="non-scaling-stroke" class="cls-2" d="M1352.39,150.7,1156.61,51.25s-339-125.71-619.17,51.32l-93.91,76.12L394.18,128.6s-50.93-29.95-73.21-26S204.77,62.3,204.77,62.3L94.94,47.57,36.05,60.46,26.5,252l9.55,31.31L13.77,589V811.81s73.21-9.21,109.82,0V640.54L257.3,635l39.79-5.53,31.83-3.68,154.4-12.89s11.14-3.68,28.65,0,85.95,23.94,85.95,23.94V758.4l8,53.41s105-9.21,148,0,264.22,14.73,264.22,14.73-56.67-56.65-81.65-61.47-95-58.83-95-58.83l-65.26-43.75L890.8,633.18s93.91-18.42,101.87-18.42S1067.48,600,1067.48,600l62.07-1.84-20.69,71.08,6.37,74.79,181.45-7.76,8-136.27V585.3l-84.36-1.84V508l-3.18-47.88L1233,397.46l-43-5.52,98.68-121.54s-23.87,3.68,15.92-20.26,78-71.45,78-71.45Zm-991.63,186-154.4,88.36s-43,46.07-62.07,66.33-58.9,64.55-58.9,64.55S91.76,421.4,96.53,406.67s0-140,0-140l135.3,11.05,146.44,51.49Z"/><path preserveAspectRatio="none" vector-effect="non-scaling-stroke" class="cls-2" d="M1129.55,598.19l-170.31-70s-25.47-12.89-89.14-46-103.46-27.62-103.46-27.62v-37.3l181.46-5.93s85.95,4.65,100.28,0S1190,391.94,1190,391.94"/><polyline class="cls-2" points="378.27 329.25 652.04 411.32 609.07 425.05 597.92 636.86"/><text class="cls-3" transform="translate(751.72 271.35)"><a href="http://theiaflynn.github.io/treehouse/story.html">Just here</a></text></g></g></svg>
+</svg>
+</div>
+
+<!-- Trigger/Open The Modal -->
+<div id="clicker"></div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+<div class="modal-content">
+   <p>Here, you can sit over there if you’d like. Yes, maybe we should stop, maybe it’s a good time now. I showed you all these things that mean so much to me. I hope I didn’t make your feet hurt. Your feet are deserving.</p>
+   <span class="close"></span>
+</div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var click = document.getElementById("clicker");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+var myFunc = function() {
+  modal.style.display = "block";
+}
+
+window.onload = function() {
+  setTimeout(myFunc, 200);
+}
+
+document.onclick = function() {
+  modal.style.display = "block";
+}
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+
+</script>
+
+</body>
+</html>
